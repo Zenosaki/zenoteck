@@ -1,0 +1,51 @@
+@import './utils/colors';
+@import './utils/mixins';
+@import './components/Section1';
+@import './components/Section2';
+@import './components/Section3';
+@import './components/Section4';
+@import './components/header';
+@import './components/CardStyle';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color:$Blue;
+}
+
+
+.Content-Box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+}
+
+footer{
+  height: 10vh;
+  background-color:$DarkBlue;
+  padding: 50px;
+  ol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  li{
+    display: inline-block;
+    color: white;
+  }
+}
+
+
+
+
+

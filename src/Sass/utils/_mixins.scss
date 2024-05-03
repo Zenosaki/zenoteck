@@ -1,0 +1,13 @@
+
+@mixin gradient-text(){
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: $gradient;
+}
+
+@mixin center-div($justify){
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}

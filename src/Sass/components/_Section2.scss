@@ -1,0 +1,31 @@
+
+
+.Section2-container{
+  width: 100%;
+  height: auto;
+ background-color:$DarkBlue;
+ padding-top:50px;
+ padding-bottom: 50px;
+ .Title_Section2{
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  padding-bottom: 20px;
+ }
+ .margin-box{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  h2{
+    color: $lightBlue;
+    text-align: center;
+    font-size: 4rem;
+   }
+   .steps{
+    @include center-div(center);
+    img{
+      width: 200px;
+    }
+   }
+ }
+}

@@ -1,0 +1,64 @@
+.header{
+  @include center-div(space-between);
+  width: 100%;
+  height: 10%;
+  padding:6% 8%;
+  .left-content{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    img{
+      width: 150px;
+    }
+    h1{
+      color: white;
+      position: relative;
+      right: 15px;
+      span{
+        color: $lightBlue;
+      }
+    }
+  }
+  .right-content{
+    ol{
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      li{
+        list-style-type: none;
+        .icon{
+          padding-right: 7px;
+        }
+        span{
+          padding-right: 8px;
+          &:hover{
+            transition: all (0.4s);
+            color:  $orange;
+            text-decoration: underline;
+          }
+        }
+        a{
+          text-decoration: none;
+          color: white;
+          &:hover{
+            transition: all (0.4s);
+            color: $orange;
+            text-decoration: underline;
+          }
+        }
+        .user-icon{
+          &:hover{
+            transition: all (0.4s);
+            color:  $orange;
+            text-decoration: underline;
+          }
+        }
+        .user-line{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.Section1-container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  a .Jump-Button{
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    border: 2px solid $lightBlue;
+    background-color: white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    color: $lightBlue;
+    animation: Jumping infinite 1s ease-in-out;
+    transition: all 0.5s ease;
+    &:hover{
+      transition: all 0.4s;
+      transform: scale(1.3);
+      background-color: white;
+      color: $orange;
+      border-color: $orange;
+    }
+  } 
+  .video-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .section1-content{
+    position: absolute;
+    right: 10%;
+    top: 43%;
+    line-height: 90px;
+    .Section1-Title{
+      color: white;
+      text-align: center;
+      font-size: 5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+    }
+    h3{
+      letter-spacing: 5px;
+      color: white;
+      text-align: center;
+    }
+    .section1-buttons{
+      @include center-div(center);
+      gap: 60px;
+      a{
+        text-decoration: none;
+      }
+      .link-1{
+        background-color: transparent;
+        border:none;   
+        a{
+          color: $lightBlue;
+          font-size: larger;
+          transition: all 0.5s ease;
+          &:hover{
+            transition: color 0.4s ease-in-out;
+            color:$orange;
+          }  
+        }  
+
+      }
+      .link-2{
+        position: relative;
+        border: 1px solid transparent;
+        padding: 15px 40px;
+        overflow: hidden;
+        z-index: 1;
+        background-color:$lightBlue;
+        &::before{
+          content: '';
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          background-color:$orange ;
+          z-index: -1;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: all 0.5s ease;
+        }
+        &:hover::before{
+          transition: all (500ms) ease-in-out;
+          transform: scaleX(1);
+        }
+        a{
+          color:white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+
+//Video background position and ratio:
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media (min-aspect-ratio:16/9){
+  .VideoBackground{
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9){
+  .VideoBackground{
+      width: auto;
+      height: 100%;
+  }
+}
+
+
+//Jumping button animation:
+
+@keyframes Jumping{
+  0%{
+    bottom: 5%;
+  }
+  50%{
+    bottom: 6%;
+  }
+  100%{
+    bottom: 5%;
+  }
+}

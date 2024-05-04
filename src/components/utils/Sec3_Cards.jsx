@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import Page from '../../scripts/DataBase'
 
 export default function Card(props) {
-    let Output;
     const handleClick = () => {
       const language = props.Language;
       console.log(language);
@@ -12,7 +11,6 @@ export default function Card(props) {
           console.log(page.id);
         }
       });
-      return Output
     };
   return (
     <div className="card-container">

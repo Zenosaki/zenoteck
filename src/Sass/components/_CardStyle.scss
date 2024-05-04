@@ -57,8 +57,11 @@
       gap: 20px;
       button{
         padding: 10px 40px;
-        color: white;
         border: 1px solid transparent;
+        a{
+          text-decoration: none;
+          color: white;
+        }
       }
     }
     &:hover{

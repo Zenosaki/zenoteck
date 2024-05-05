@@ -11,6 +11,7 @@ export default function Card(props) {
         if (page.Title === language) {
           P2.Title= language;
           P2.Description= props.Description;
+          console.log(page.lessons.l1);
         }
       });
       console.log(P2);

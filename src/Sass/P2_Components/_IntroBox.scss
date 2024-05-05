@@ -1,0 +1,35 @@
+.IntroBox_Margin{
+  @include center-div(center);
+  width: 100%;
+  .introBox_Container{
+    border: 1px solid;
+    border-radius: 30px;
+    color: white;
+    width: 80%;
+    height: 400px;
+    padding: 3% 4%;
+    background-color:$DarkBlue;
+    @include center-div(space-between);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.301);
+    .Box_Left{
+      .Card_Description{
+        padding-bottom: 10px;
+        p{
+          font-size: larger;
+          .First_Letter{
+            font-weight: bolder;
+            font-size: larger;
+          }
+        }
+        hr{
+          position:relative;
+          width: 100px;
+        }
+      }
+      h1{
+        font-size:3rem;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

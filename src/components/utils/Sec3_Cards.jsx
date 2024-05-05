@@ -1,21 +1,13 @@
 import PropTypes from 'prop-types';
 import Page from '../../DataBase/DataBase';
-import P2 from '../../DataBase/P2_Props';
+
 
 export default function Card(props) {
-    const handleClick = () => {
-      const language = props.Language;
-      console.log(language);
-  
-      Page.forEach(page => {
-        if (page.Title === language) {
-          P2.Title= language;
-          P2.Description= props.Description;
-          console.log(page.lessons.l1);
-        }
-      });
-      console.log(P2);
-    };
+  console.log(Page)
+  const handleClick = () => {
+    localStorage.setItem('currtitle', JSON.stringify(props.Language));
+  };
+
   return (
     <div className="card-container">
       <div className="theCard" style={{ borderColor: props.mainColor }}>
@@ -40,7 +32,7 @@ export default function Card(props) {
             style={{ backgroundColor: props.mainColor }}
             onClick={handleClick}
           >
-           <a href="#">Join</a>
+            <a href="Page.html" >Join</a>
           </button>
         </div>
       </div>
@@ -48,9 +40,11 @@ export default function Card(props) {
   );
 }
 
-
 Card.propTypes = {
   mainColor: PropTypes.string,
   Description: PropTypes.string,
   Language: PropTypes.string,
 };
+
+
+

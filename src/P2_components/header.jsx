@@ -1,4 +1,4 @@
-import Logo from '../assets/imgs/logo-icon.png'
+import Logo from '../assets/imgs/logo-icon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import {faDumbbell} from '@fortawesome/free-solid-svg-icons';

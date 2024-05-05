@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import Page from '../../scripts/DataBase'
+import Page from '../../DataBase/DataBase';
+import P2 from '../../DataBase/P2_Props';
 
 export default function Card(props) {
     const handleClick = () => {
@@ -8,9 +9,11 @@ export default function Card(props) {
   
       Page.forEach(page => {
         if (page.Title === language) {
-          console.log(page.id);
+          P2.Title= language;
+          P2.Description= props.Description;
         }
       });
+      console.log(P2);
     };
   return (
     <div className="card-container">
@@ -36,7 +39,7 @@ export default function Card(props) {
             style={{ backgroundColor: props.mainColor }}
             onClick={handleClick}
           >
-           <a href="Page.html">Join</a>
+           <a href="#">Join</a>
           </button>
         </div>
       </div>

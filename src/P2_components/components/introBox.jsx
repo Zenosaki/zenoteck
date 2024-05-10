@@ -19,7 +19,6 @@ export default function IntroBox(){
       }
     };
 
-    // Call the function to fetch data from local storage
     fetchDataFromLocalStorage();
   }, []);
   
